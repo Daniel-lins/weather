@@ -19,7 +19,16 @@ export const Grid = styled.div`
   color: #0d1117;
   font-weight: bold;
 
-  .containerLabels {
+  @media (max-width: 520px) {
+    display: flex;
+    flex-direction: column;
+
+    .labels1 {
+      display: none !important;
+    }
+    .labels2 {
+      margin-right: 120px;
+    }
   }
 
   .containerCapitals {

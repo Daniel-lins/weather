@@ -1,18 +1,47 @@
-import {
-  ContainerTitle,
-  CardResultt,
-  ContainerCapitais,
-  ContainerSearch,
-}  from "./styles"
+import { ContainerTitle, CardResultt, ContainerSearch } from "./styles";
 import React, { useEffect, useState } from "react";
-import { getWeatherData } from "../../services/api""
+import { getWeatherData } from "../../services/api";
 import { BsSearch } from "react-icons/bs";
 
-i
+export interface WeatherData {
+  location: {
+    region: string;
+    name: string;
+    country: string;
+  };
+  current: {
+    temp_c: string;
+    vis_km: string;
+    feelslike_c: string;
+    humidity: string;
+
+    condition: {
+      text: string;
+      icon: string;
+    };
+  };
+  forecast: {
+    forecastday: [
+      {
+        day: {
+          maxtemp_c: number;
+          mintemp_c: number;
+        };
+      }
+    ];
+  };
+  responses: [
+    {
+      data: {
+        current: { cloud: string };
+      };
+    }
+  ];
+}
 
 export function CardResult() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
-  const [city, setCity] = useState("rio de janeiro");
+  const [city, setCity] = useState("");
 
   const getData = async () => {
     try {
@@ -31,7 +60,6 @@ export function CardResult() {
   useEffect(() => {
     getData();
   }, []);
-  return <CardResult />;
   return (
     <>
       <ContainerTitle>

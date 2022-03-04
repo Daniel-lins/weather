@@ -73,29 +73,30 @@ export function Capitais() {
         {" "}
         <h1>Capitais</h1>{" "}
       </div>
-
-      <Grid>
-        <div className="labels1">
-          <Labels>Min</Labels>
-          <Labels>Max</Labels>
-        </div>
-        <div className="labels2">
-          <Labels>Min</Labels>
-          <Labels>Max</Labels>
-        </div>
-
-        {data.map((c) => (
-          <div className="containerCapitals" key={c.location.name}>
-            <Info>{c.forecast.forecastday[0].day.maxtemp_c.toFixed()}º </Info>
-            <Info>
-              {c.forecast.forecastday[0].day.mintemp_c.toFixed()}º
-            </Info>{" "}
-            <Info>{c.location.name}</Info>
+      {data && (
+        <Grid>
+          <div className="labels1">
+            <Labels>Min</Labels>
+            <Labels>Max</Labels>
           </div>
-        ))}
+          <div className="labels2">
+            <Labels>Min</Labels>
+            <Labels>Max</Labels>
+          </div>
 
-        <> </>
-      </Grid>
+          {data.map((c) => (
+            <div className="containerCapitals" key={c.location.name}>
+              <Info>{c.forecast.forecastday[0].day.maxtemp_c.toFixed()}º </Info>
+              <Info>
+                {c.forecast.forecastday[0].day.mintemp_c.toFixed()}º
+              </Info>{" "}
+              <Info>{c.location.name}</Info>
+            </div>
+          ))}
+
+          <> </>
+        </Grid>
+      )}
     </Container>
   );
 }

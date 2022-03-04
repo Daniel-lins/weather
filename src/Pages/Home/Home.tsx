@@ -1,12 +1,12 @@
-import { Capitais } from "../../components/capitais";
+import { Capitais } from "../../components/Capitais";
 
 import { CardResult } from "../../components/CardResult";
 import { Container } from "./styles";
 export function Home() {
   return (
     <Container>
-      ola mundo
       <CardResult />
+      <Capitais />
     </Container>
   );
 }

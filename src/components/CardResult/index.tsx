@@ -1,16 +1,72 @@
-import { Container } from "./styles";
-import { Capitais } from "../../components/capitais";
+import { ContainerTitle, CardResultt, ContainerSearch } from "./styles";
+import React, { useEffect, useState } from "react";
+import { getWeatherData } from "../../services/api";
+import { BsSearch } from "react-icons/bs";
 
-import { CardResult } from "../../components/CardResult";
+export interface WeatherData {
+  location: {
+    region: string;
+    name: string;
+    country: string;
+  };
+  current: {
+    temp_c: string;
+    vis_km: string;
+    feelslike_c: string;
+    humidity: string;
 
-export function Home() {
+    condition: {
+      text: string;
+      icon: string;
+    };
+  };
+  forecast: {
+    forecastday: [
+      {
+        day: {
+          maxtemp_c: number;
+          mintemp_c: number;
+        };
+      }
+    ];
+  };
+  responses: [
+    {
+      data: {
+        current: { cloud: string };
+      };
+    }
+  ];
+}
+
+export function CardResult() {
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
+  const [city, setCity] = useState("");
+
+  const getData = async () => {
+    try {
+      const data = await getWeatherData(city);
+
+      setWeatherData(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleCloseCard = () => {
+    setWeatherData(null);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
   return (
-    <Container>
-      {/* <ContainerTitle>
+    <>
+      <ContainerTitle>
         <h1>Previsão do tempo </h1>{" "}
       </ContainerTitle>
       {weatherData && (
-        <CardResult>
+        <CardResultt>
           <p className="place">
             {weatherData?.location.name}, {weatherData?.location.region} -{" "}
             {weatherData?.location.country}
@@ -50,7 +106,7 @@ export function Home() {
               </div>
             </div>
           </div>
-        </CardResult>
+        </CardResultt>
       )}
       <ContainerSearch>
         <input
@@ -63,9 +119,7 @@ export function Home() {
           {" "}
           <BsSearch />{" "}
         </button>
-      </ContainerSearch> */}
-      <CardResult />
-      <Capitais />
-    </Container>
+      </ContainerSearch>
+    </>
   );
 }

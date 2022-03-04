@@ -76,12 +76,12 @@ export function Capitais() {
 
       <Grid>
         <div className="labels1">
-          <Labels>Min</Labels>
           <Labels>Max</Labels>
+          <Labels>Min</Labels>
         </div>
         <div className="labels2">
-          <Labels>Min</Labels>
           <Labels>Max</Labels>
+          <Labels>Min</Labels>
         </div>
 
         {data.map((c) => (

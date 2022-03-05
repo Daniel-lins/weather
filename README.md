@@ -1,46 +1,66 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center"> Weather </h1>
+<p align="center">  🌞 Weather, it's a challenge taken from the repository <a href="https://github.com/felipefialho/frontend-challenges">frontend-challenges</a> </p>
+<p> </p> 
+<p align="center" ><a  href="https://financeiro-react.herokuapp.com/" > Application running | click here </a>  </p>
+<p align="center">
+   <a href="https://www.linkedin.com/in/daniel-lins-/">
+      <img alt="DanielLins" src="https://img.shields.io/badge/-DanielLi-5965e0?style=flat&logo=Linkedin&logoColor=white" />
+      <img alt="Issues" src="https://img.shields.io/github/issues/daniel-lins/weather?color=%235965E0">
+  <a href="Dlins300@gmail.com">
+   <img alt="Email" src="https://img.shields.io/badge/-dlins300%40gmail.com-%23525DCB" />
+  </a>
+</p>
 
-## Available Scripts
+# 📌 Contents
 
-In the project directory, you can run:
+* [Screenshots](#camera-screenshot)
+* [Technologies](#rocket-technologies)
+* [How to Run](#computer-how-to-run)
+* [Issues](#bug-issues)
+* [License](#page_facing_up-license)
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# :camera: Screenshots
+<div align="center">
+   <img src="https://user-images.githubusercontent.com/71731815/156864623-b7c767cd-eed6-41af-90bf-c09f3db7d1c2.png"  width="500px" />
+   <img src="https://user-images.githubusercontent.com/71731815/156864659-3476f2a3-6bd1-4b71-a8fa-958bebe16980.png" width="500px" />
+  <img src="https://user-images.githubusercontent.com/71731815/156864704-f017ef64-e2ed-4628-8b96-330fc3a3da43.png" width="300px"  />
+  <img src="https://user-images.githubusercontent.com/71731815/156864758-50414316-1930-47f4-95b4-735d2151d907.png" width="300px"  />
+  
+ 
+  
+</div>
 
-### `yarn test`
+# :rocket: Technologies
+This project was made using the follow technologies:
+* [Typescript](https://www.typescriptlang.org/)      
+* [React](https://reactjs.org/)      
+* [Styled Components](https://styled-components.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# :computer: How to run
 
-### `yarn build`
+```bash
+# Clone Repository
+$ git clone https://github.com/Daniel-lins/weather
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Install Dependencies
+$ yarn add
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Run Aplication
+$ yarn start
+```
+Go to http://localhost:3000/ to see the result.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# :bug: Issues
 
-### `yarn eject`
+Create a <a href="https://github.com/daniel-lins/weather/issues">new issue report</a>, it will be an honor to be able to help you solve and further improve our application.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# :page_facing_up: License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is under the [MIT license](./LICENSE).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Thank you! 🌠
